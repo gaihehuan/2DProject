@@ -24,7 +24,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public override void Move(GameObject go)
         {
             base.Move(go);
-            float h = Input.GetAxis("Horizontal") * 20f;
+            float h = Input.GetAxis("Horizontal") * 0.5f;
             float v = Input.GetAxis("Vertical") * 20f;
      
 #if UNITY_STANDALONE_WIN && UNITY_EDITOR

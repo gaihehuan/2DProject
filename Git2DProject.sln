@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git2DProject.Plugins", "Git2DProject.Plugins.csproj", "{2CB86750-99A8-055D-0A4E-03BFFD39CD50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git2DProject", "Git2DProject.csproj", "{4E7349E7-734F-54D1-E29A-4847A0DEED21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git2DProject.Editor.Plugins", "Git2DProject.Editor.Plugins.csproj", "{AAAA36A8-1CD3-70E3-64D5-22C59D1B18AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Git2DProject.Editor", "Git2DProject.Editor.csproj", "{B2BD7486-E4DC-2B5F-6F99-B21CF0A0F628}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CB86750-99A8-055D-0A4E-03BFFD39CD50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB86750-99A8-055D-0A4E-03BFFD39CD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB86750-99A8-055D-0A4E-03BFFD39CD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB86750-99A8-055D-0A4E-03BFFD39CD50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E7349E7-734F-54D1-E29A-4847A0DEED21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E7349E7-734F-54D1-E29A-4847A0DEED21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E7349E7-734F-54D1-E29A-4847A0DEED21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E7349E7-734F-54D1-E29A-4847A0DEED21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAAA36A8-1CD3-70E3-64D5-22C59D1B18AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAAA36A8-1CD3-70E3-64D5-22C59D1B18AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAAA36A8-1CD3-70E3-64D5-22C59D1B18AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAAA36A8-1CD3-70E3-64D5-22C59D1B18AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2BD7486-E4DC-2B5F-6F99-B21CF0A0F628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2BD7486-E4DC-2B5F-6F99-B21CF0A0F628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2BD7486-E4DC-2B5F-6F99-B21CF0A0F628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2BD7486-E4DC-2B5F-6F99-B21CF0A0F628}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

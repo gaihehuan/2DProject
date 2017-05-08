@@ -61,7 +61,7 @@ namespace UnityStandardAssets.Vehicles.Car
             m_WheelMeshLocalRotations = new Quaternion[4];
             for (int i = 0; i < 4; i++)
             {
-                Debug.Log(m_WheelMeshes[i].name); 
+              //  Debug.Log(m_WheelMeshes[i].name); 
                 m_WheelMeshLocalRotations[i] = m_WheelMeshes[i].transform.localRotation;
             }
             m_WheelColliders[0].attachedRigidbody.centerOfMass = m_CentreOfMassOffset;
