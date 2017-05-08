@@ -1,77 +1,76 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+namespace UnityStandardAssets.Vehicles.Car
+{
+    [RequireComponent(typeof(CarController))]
+    public class PlayerControl : Controller
+    {
+        StaticValue value = new StaticValue();
 
-public class PlayerControl : Controller {
-    StaticValue value = new StaticValue();
-    GameObject one;
-    GameObject two;
-    GameObject three;
-    GameObject four;
-    // Use this for initialization
-    void Start ()
-    {
-        this.gameObject.AddComponent<Rigidbody>();
-        this.gameObject.GetComponent<Rigidbody>().useGravity = false;
-        one = GameObject.Find("tire_rear01");
-         two = GameObject.Find("tire_rear");
-        three = GameObject.Find("Front_tire01");
-        four = GameObject.Find("Front_tire");
-    }
+        private CarController m_Car;
 
-    private void FixedUpdate()
-    {
-        Move(this.gameObject);
-    }
-    public override void Move(GameObject go)
-    {
-        base.Move(go);
+        void Start()
+        {
+
+            m_Car = GetComponent<CarController>();
+
+        }
+
+        private void FixedUpdate()
+        {
+            Move(this.gameObject);
+        }
+        public override void Move(GameObject go)
+        {
+            base.Move(go);
+            float h = Input.GetAxis("Horizontal") * 20f;
+            float v = Input.GetAxis("Vertical") * 20f;
+     
 #if UNITY_STANDALONE_WIN && UNITY_EDITOR
-        //Unity和PC平台
-        if (Input.GetKey(KeyCode.W))
-        {
-            value.SpeedSet = 10.0f;
-            this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.right * value.SpeedGet);
-            WheelRotate(one);
-            WheelRotate(two);
-            WheelRotate(three);
-            WheelRotate(four);
-        }
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            value.SpeedSet = 0f;
-            this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.right * value.SpeedGet);
-            
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            value.SpeedSet = 10.0f;
-            this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.left * value.SpeedGet);
-            WheelRotate(one);
-            WheelRotate(two);
-            WheelRotate(three);
-            WheelRotate(four);
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            value.SpeedSet = 0f;
-            this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.left * value.SpeedGet);
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
+            //Unity和PC平台
+            if (Input.GetKey(KeyCode.W))
+            {
+                m_Car.Move(h, v, v, 0);
+            }
+            if (Input.GetKeyUp(KeyCode.W))
+            {
+                m_Car.Move(0, 0, 0, 0);
 
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-
-        }
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+              
+                m_Car.Move(h, v, v, 0);
+               
+            }
+            if (Input.GetKeyUp(KeyCode.S))
+            {
+                m_Car.Move(h, v, v, 0);
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                m_Car.Move(h, v, v, 0);
+            }
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                m_Car.Move(h, v, v, 0);
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                m_Car.Move(h, v, v, 0);
+            }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                m_Car.Move(h, v, v, 0);
+            }
 #elif UNITY_ANDROID
         //安卓平台
 #endif
-    }
-    private void WheelRotate(GameObject one)
-    {
-        one.transform.Rotate(new Vector3(0,1,0),180f);
-        Debug.Log("test");
+        }
+        private void WheelRotate(GameObject one)
+        {
+            one.transform.Rotate(new Vector3(1, 0, 0), 180f);
+        }
     }
 }
