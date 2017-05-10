@@ -24,7 +24,7 @@ namespace UnityStandardAssets.Vehicles.Car
         public override void Move(GameObject go)
         {
             base.Move(go);
-            float h = Input.GetAxis("Horizontal") * 0.5f;
+            float h = Input.GetAxis("Horizontal") * 0.3f;
             float v = Input.GetAxis("Vertical") * 20f;
      
 #if UNITY_STANDALONE_WIN && UNITY_EDITOR
@@ -46,7 +46,7 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             if (Input.GetKeyUp(KeyCode.S))
             {
-                m_Car.Move(h, v, v, 0);
+                m_Car.Move(0, 0, 0, 0);
             }
             if (Input.GetKeyDown(KeyCode.A))
             {
@@ -54,7 +54,7 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             if (Input.GetKeyUp(KeyCode.A))
             {
-                m_Car.Move(h, v, v, 0);
+                m_Car.Move(0, 0, 0, 0);
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
@@ -62,15 +62,12 @@ namespace UnityStandardAssets.Vehicles.Car
             }
             if (Input.GetKeyUp(KeyCode.D))
             {
-                m_Car.Move(h, v, v, 0);
+                m_Car.Move(0, 0, 0, 0);
             }
 #elif UNITY_ANDROID
         //安卓平台
 #endif
         }
-        private void WheelRotate(GameObject one)
-        {
-            one.transform.Rotate(new Vector3(1, 0, 0), 180f);
-        }
+
     }
 }

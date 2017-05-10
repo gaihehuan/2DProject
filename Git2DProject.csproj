@@ -109,6 +109,8 @@
     <Compile Include="Assets\Pack_AncienEgypt\DemoScene\Script\Pyramid\SpikesDeath.cs" />
     <Compile Include="Assets\Pack_AncienEgypt\DemoScene\Script\SmoothMouseLook.cs" />
     <Compile Include="Assets\Pack_AncienEgypt\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\AbstractTargetFollower.cs" />
+    <Compile Include="Assets\Scripts\AutoCam.cs" />
     <Compile Include="Assets\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scripts\CarAudio.cs" />
     <Compile Include="Assets\Scripts\Commen\Controller.cs" />
@@ -116,9 +118,12 @@
     <Compile Include="Assets\Scripts\Commen\LoadingCommen.cs" />
     <Compile Include="Assets\Scripts\Commen\StaticValue.cs" />
     <Compile Include="Assets\Scripts\Commen\UIControl.cs" />
+    <Compile Include="Assets\Scripts\Game\EmenyAI.cs" />
+    <Compile Include="Assets\Scripts\Game\EmenyBase.cs" />
     <Compile Include="Assets\Scripts\Game\GameController.cs" />
     <Compile Include="Assets\Scripts\Game\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Mudguard.cs" />
+    <Compile Include="Assets\Scripts\PivotBasedCameraRig.cs" />
     <Compile Include="Assets\Scripts\SkidTrail.cs" />
     <Compile Include="Assets\Scripts\UI\LoadRes.cs" />
     <Compile Include="Assets\Scripts\UI\LoginUI.cs" />

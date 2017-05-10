@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/main.unity
+- path: Assets/IslandHighwayRace/Scene_Island Highway Race.unity
   isLoaded: 1
   isActive: 1
